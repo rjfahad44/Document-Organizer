@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    android:translationZ="3dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/nameSortViewRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/nameIconIv"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_list_view"
+                app:tint="@color/toolbar_btn_icon_bg" />
+
+            <TextView
+                android:id="@+id/sortByNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/nameIconIv"
+                android:text="Name"
+                android:layout_marginStart="10dp"/>
+
+            <RadioButton
+                android:id="@+id/nameRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/categorySortViewRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:layout_below="@+id/nameSortViewRl">
+
+            <ImageView
+                android:id="@+id/categoryIconIv"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="13dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_compact"
+                app:tint="@color/toolbar_btn_icon_bg" />
+
+            <TextView
+                android:id="@+id/sortByCategoryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/categoryIconIv"
+                android:text="Category"
+                android:layout_marginStart="10dp"/>
+
+            <RadioButton
+                android:id="@+id/categoryRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dateSortViewRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:layout_below="@id/categorySortViewRl">
+
+            <ImageView
+                android:id="@+id/dateIconIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_grid_view"
+                app:tint="@color/toolbar_btn_icon_bg" />
+
+            <TextView
+                android:id="@+id/sortByDateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/dateIconIv"
+                android:text="Date"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"/>
+
+            <RadioButton
+                android:id="@+id/dateRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

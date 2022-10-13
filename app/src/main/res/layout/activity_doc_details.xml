@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DocDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/click_effect"
+            android:padding="0dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/docTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/editImgV"
+            android:layout_toEndOf="@id/backImgV"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Document Title"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/cloudImaV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/click_effect"
+            android:padding="8dp"
+            android:src="@drawable/ic_cloud_sync" />
+
+        <ImageView
+            android:id="@+id/editImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/cloudImaV"
+            android:background="@drawable/click_effect"
+            android:padding="8dp"
+            android:src="@drawable/ic_edit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/topRl"
+        android:background="@color/layout_color_bg">
+
+        <ImageView
+            android:id="@+id/docImgV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/layout_color_bg"
+            android:scaleType="center"
+            android:visibility="gone" />
+
+        <com.ft.document_organizer.helper.TouchImageView
+            android:id="@+id/docTouchImgV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="center"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/bottomRl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDetailsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp"
+                android:translationZ="2dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp">
+
+                    <ImageView
+                        android:id="@+id/detailsImgV"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:src="@drawable/ic_info"
+                        app:tint="@color/blue" />
+
+                    <TextView
+                        android:id="@+id/detailsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@+id/detailsImgV"
+                        android:text="Details"
+                        android:textColor="@color/blue" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cvDetailsButton"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:translationZ="2dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:id="@+id/docNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="Doc Name (default name will be category - date)"
+                        android:textColor="@color/txt_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvIconContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/docNameTv"
+                        android:layout_alignParentStart="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="5dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/lL"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/category_item_layout_bg"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/folderIcon"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_file_dollar" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/categoryNameTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/docNameTv"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="26dp"
+                        android:layout_toEndOf="@id/cvIconContainer"
+                        android:text="Category Name"
+                        android:textColor="@color/txt_color" />
+
+                    <TextView
+                        android:id="@+id/fileSizeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/docNameTv"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="26dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/txt_color"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/imagePixelsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/fileSizeTv"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/txt_color"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:id="@+id/dateContainerLl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/categoryNameTv"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/calendarIconImgV"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:src="@drawable/ic_calendar" />
+
+                        <TextView
+                            android:id="@+id/dateTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="24 May 2022"
+                            android:textColor="@color/date_text_color_bg"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/dateContainerLl"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/corner_radious_10dp_sky_blue_bg">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvCategoryFields"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

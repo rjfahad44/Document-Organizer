@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--external folder access and convert file path to uri-->
+    <!--<external-path name="external_files" path="."/>-->
+    <!--internal folder access and convert file path to uri-->
+    <files-path name="external_files" path="."/>
+</paths>

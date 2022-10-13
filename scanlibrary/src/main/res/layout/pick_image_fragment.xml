@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F3F4FF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#F3F4FF"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:id="@+id/cameraButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/corner_radious_10dp_sky_blue_deep_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/cameraIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_camera_"
+                app:tint="@color/light_blue" />
+
+            <TextView
+                android:id="@+id/cameraTvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/cameraIcon"
+                android:text="CAMERA"
+                android:textColor="#4e8cf5"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/selectButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/corner_radious_10dp_sky_blue_deep_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/selectFromImgV"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_gallery"
+                app:tint="@color/light_blue" />
+
+            <TextView
+                android:id="@+id/selectFromTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/selectFromImgV"
+                android:text="SELECT FROM"
+                android:textColor="#4e8cf5"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

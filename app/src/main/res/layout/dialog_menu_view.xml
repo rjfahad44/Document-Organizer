@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/corner_radious_10dp"
+    android:paddingBottom="30dp">
+
+    <RelativeLayout
+        android:id="@+id/menuHeaderRl"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:id="@+id/menuTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="50dp"
+            android:text="Menu"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/closeImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/click_effect"
+            android:padding="0dp"
+            android:src="@drawable/ic_close" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/toolbar_btn_icon_bg" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/categoryRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_below="@+id/menuHeaderRl"
+        android:layout_marginTop="20dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:foreground="?selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <ImageView
+            android:id="@+id/categoryImgMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_category_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/categoryImgMenu"
+            android:text="Category"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/syncRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_below="@+id/categoryRl"
+        android:foreground="?selectableItemBackground"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        tools:ignore="UnusedAttribute">
+
+        <ImageView
+            android:id="@+id/syncImgMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_sync" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/syncImgMenu"
+            android:text="Sync"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/settingsRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_below="@+id/syncRl"
+        android:foreground="?selectableItemBackground"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        tools:ignore="UnusedAttribute"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/settingsImgMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_settings" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/settingsImgMenu"
+            android:text="Settings"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aboutRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_below="@+id/settingsRl"
+        android:layout_marginTop="40dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:foreground="?selectableItemBackground"
+        tools:ignore="UnusedAttribute">
+
+        <ImageView
+            android:id="@+id/aboutImgMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_info_menu"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/aboutImgMenu"
+            android:text="About"
+            android:textColor="@color/txt_color_1" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signOutRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_below="@+id/aboutRl"
+        android:foreground="?selectableItemBackground"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        tools:ignore="UnusedAttribute">
+
+        <ImageView
+            android:id="@+id/exitImgMenu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_exit"/>
+
+        <TextView
+            android:id="@+id/signOuTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/exitImgMenu"
+            android:text="Sign Out"
+            android:textColor="@color/txt_color_1" />
+    </RelativeLayout>
+
+</RelativeLayout>

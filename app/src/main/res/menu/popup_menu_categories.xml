@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editPopupMenuId"
+        android:icon="@drawable/ic_edit2"
+        android:title="  Edit" />
+
+    <item
+        android:id="@+id/deletePopupMenuId"
+        android:icon="@drawable/ic_delete"
+        android:title="  Delete" />
+
+    <item
+        android:id="@+id/markPopupMenuId"
+        android:icon="@drawable/ic_select"
+        android:title="  Mark" />
+
+    <item
+        android:id="@+id/markAllPopupMenuId"
+        android:icon="@drawable/ic_select_all"
+        android:title="  Mark All" />
+
+</menu>

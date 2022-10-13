@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Document_organizer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- SearchView Custom QueryText and QueryHintText Color -->
+    <style name="Theme.SearchView" parent="Theme.MaterialComponents">
+        <!-- Text color -->
+        <item name="android:editTextColor">@color/txt_color</item>
+        <!-- Hint text color -->
+        <item name="android:textColorHint">@color/search_hint_text_color</item>
+        <!-- CloseIcon Tint Color change -->
+        <item name="tint">@color/search_hint_text_color</item>
+    </style>
+
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    android:translationZ="3dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp">
+
+            <ImageView
+                android:id="@+id/listIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_list_view" />
+
+            <TextView
+                android:id="@+id/listTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/listIcon"
+                android:text="List"
+                android:layout_marginStart="10dp" />
+
+            <RadioButton
+                android:id="@+id/listRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/compactView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:layout_below="@+id/listView">
+
+            <ImageView
+                android:id="@+id/compactIcon"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="13dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_compact"/>
+
+            <TextView
+                android:id="@+id/compactTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/compactIcon"
+                android:text="Compact"
+                android:layout_marginStart="10dp"/>
+
+            <RadioButton
+                android:id="@+id/compactRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="10dp"
+            android:layout_below="@id/compactView">
+
+            <ImageView
+                android:id="@+id/gridIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_grid_view"/>
+
+            <TextView
+                android:id="@+id/gridTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gridIcon"
+                android:text="Grid"
+                android:layout_marginStart="5dp"
+                android:layout_centerVertical="true"/>
+
+            <RadioButton
+                android:id="@+id/gridRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:buttonTint="@color/blue"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

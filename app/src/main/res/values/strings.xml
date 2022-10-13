@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Doc Organizer</string>
+
+
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="your_web_client_id">453633151288-mfnme9glq6onrloj3q0hl0rjhrsaqms6.apps.googleusercontent.com</string>
+
+    <string name="about_text">
+        Document Organizer is a very useful app, You can easily organize documents through this app, we add the document categorically to the app it will be synced to the cloud.\n\n
+Document Organizer app that creates a digital archive of your personal files, including documents, notes, cards, and receipts. Take a photo of paper files or upload digital files, and sort in file folders for maximum convenience.\n\n
+No more worrying about losing or exposing your personal information – sync document into the cloud.\n\n
+if we can, we will be able to receive our documents from any device via our Gmail account login. we can easily download the documents at any time if we want.
+    </string>
+
+    <string name="about_list">
+        <ol>
+            <li> Capture or Select Document from gallery/Folder.</li>
+            \n<li>\tEdit Document and save.</li>
+            \n<li>\tSync the document into the cloud.</li>
+            \n<li>\tIf do not have a sign in then need to sign up and sign in.</li>
+            \n<li>\tDocument can be stored by categorically.</li>
+            \n<li>\tRename document, Update document, Delete document, Search document.</li>
+            \n<li>\tSort Document by Name, Category, Date, Size.</li>
+        </ol>
+    </string>
+
+
+    <string name="about_1">1. Capture or Select Document from gallery/Folder.</string>
+    <string name="about_2">2. Edit Document and save.</string>
+    <string name="about_3">3. Sync the document into the cloud.</string>
+    <string name="about_4">4. If do not have a sign in then need to sign up and sign in.</string>
+    <string name="about_5">5. Document can be stored by categorically.</string>
+    <string name="about_6">6. Rename document, Update document, Delete document, Search document.</string>
+    <string name="about_7">7. Sort Document by Name, Category, Date, Size.</string>
+
+    <string name="synchronizing_txt">Send and receive changes between device data and cloud data, allowing you to create synchronize your data between multiple devices.</string>
+
+</resources>

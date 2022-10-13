@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/file_select_option_bg">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Select from"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/title"
+        android:gravity="center_horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/selectGalleryLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/corner_radious_10dp_white_bg_padding_8dp"
+            android:backgroundTint="@color/layout_color_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <ImageView
+                android:id="@+id/upload"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_stroke"
+                android:padding="15dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Gallery"
+                android:textColor="@color/txt_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/folderSelectLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/corner_radious_10dp_white_bg_padding_8dp"
+            android:backgroundTint="@color/layout_color_bg">
+
+            <ImageView
+                android:id="@+id/createNewFolder"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/circle_stroke"
+                android:src="@drawable/ic_category_folder"
+                app:tint="@color/blue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Folder"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/txt_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

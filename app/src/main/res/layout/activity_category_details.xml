@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CategoryDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/click_effect"
+            android:padding="0dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/categoryTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@id/plusImgBtn"
+            android:layout_toEndOf="@id/backImgV"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Category Name"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/plusImgBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/changeRvList"
+            android:background="@drawable/click_effect"
+            android:padding="10dp"
+            android:src="@drawable/ic_plus" />
+
+
+        <ImageView
+            android:id="@+id/changeRvList"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/click_effect"
+            android:padding="10dp"
+            android:src="@drawable/ic_list_view" />
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/search_view_white_bg"
+            android:iconifiedByDefault="true"
+            android:queryHint="Search Keyword.."
+            android:searchIcon="@drawable/ic_search"
+            android:theme="@style/Theme.SearchView" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topRl"
+        android:background="@color/layout_color_bg">
+
+        <RelativeLayout
+            android:id="@+id/rl2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10sp">
+
+            <RelativeLayout
+                android:id="@+id/changeListOrderRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/corner_radious_10dp_white_bg_padding_8dp">
+
+                <ImageView
+                    android:id="@+id/sortIconImgV"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_sort" />
+
+                <TextView
+                    android:id="@+id/sortTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/sortIconImgV"
+                    android:text="Sort by Date"
+                    android:textColor="@color/light_blue"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/noDocYetTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="50dp"
+            android:text="No Documents Yet"
+            android:textColor="@color/no_document_yet_txt_color"
+            android:textSize="20sp"
+            android:visibility="visible"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rvCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/layout_color_bg">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSearchDoc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                tools:listitem="@layout/item_document_compact_rv"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

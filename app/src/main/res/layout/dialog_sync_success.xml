@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/syncDoneIcon"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_data_sync_done"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/syncDoneIcon"
+            android:text="SUCCESSFUL"
+            android:textAlignment="center"
+            android:textColor="#34A853"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/title"
+            android:text="Data sync to your cloud account"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="#8688AB"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/toolbar_btn_icon_bg"
+            android:layout_below="@id/subTitle"/>
+
+        <TextView
+            android:id="@+id/okBtnTv"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/divider"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/click"
+            android:gravity="center"
+            android:text="OK"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

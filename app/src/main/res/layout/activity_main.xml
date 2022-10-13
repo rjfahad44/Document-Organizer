@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_color_bg"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/menuImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/click_effect"
+            android:padding="5dp"
+            android:src="@drawable/ic_menu"
+            app:tint="@color/blue" />
+
+        <TextView
+            android:id="@+id/appTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/menuImgV"
+            android:text="Doc Organizer"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/plusImgBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/changeRvList"
+            android:background="@drawable/click_effect"
+            android:padding="10dp"
+            android:src="@drawable/ic_plus" />
+
+        <ImageView
+            android:id="@+id/changeRvList"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/searchImgV"
+            android:background="@drawable/click_effect"
+            android:padding="10dp"
+            android:src="@drawable/ic_list_view" />
+
+        <ImageView
+            android:id="@+id/searchImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/click_effect"
+            android:padding="10dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/toolbar_btn_icon_bg" />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScroolView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:fillViewport="true"
+        android:layout_below="@id/topRl"
+        android:paddingTop="10dp"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/category_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="20dp"
+                android:paddingEnd="10dp" />
+
+            <LinearLayout
+                android:id="@+id/addCategoryLL"
+                android:layout_width="70dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="-3dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/category_rv"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/lL"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/category_item_layout_bg"
+                    android:foreground="?selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/category_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_plus"
+                        app:tint="@color/toolbar_btn_icon_bg" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lL"
+                    android:text="Add New"
+                    android:textColor="@color/txt_color" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/horizontalScroolView"
+        android:background="@color/layout_color_bg">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/toolbar_btn_icon_bg" />
+
+        <TextView
+            android:id="@+id/recentTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="All Documents"
+            android:textColor="@color/txt_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/rvCv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recentTv"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/layout_color_bg">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDoc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/noDocYetTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addDoc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:text="No Documents Yet"
+            android:textColor="@color/no_document_yet_txt_color"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/addDoc"
+            android:layout_width="230dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_radious_10dp_sky_blue_deep_bg"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/plus_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_plus"
+                app:tint="@color/light_blue" />
+
+            <TextView
+                android:id="@+id/addNewDoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/plus_btn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="ADD A NEW DOCUMENT"
+                android:textColor="@color/light_blue"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

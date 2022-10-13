@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/syncDoneIcon"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_data_sync_fail" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/syncDoneIcon"
+            android:text="ERROR"
+            android:textAlignment="center"
+            android:textColor="#EA4335"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="10dp"
+            android:text="Data sync can not complete"
+            android:textAlignment="center"
+            android:textColor="#8688AB"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/toolbar_btn_icon_bg"
+            android:layout_below="@id/subTitle"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/cancelBtnTv"
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_below="@+id/divider"
+                android:text="CANCEL"
+                android:textStyle="bold"
+                android:textColor="#8688AB"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/click"/>
+
+
+            <TextView
+                android:id="@+id/retryBtnTv"
+                android:layout_weight=".5"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_below="@+id/divider"
+                android:text="RETRY"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:background="@drawable/click"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

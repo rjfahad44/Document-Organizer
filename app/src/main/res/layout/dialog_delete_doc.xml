@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/folderCreateCardView"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="Delete File"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/header_title"
+            android:background="@color/toolbar_btn_icon_bg" />
+
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Are you sure do you want to delete this?"
+            android:textAlignment="center"
+            android:textColor="@color/txt_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/deleteBtnTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/btn_effect"
+            android:text="Delete"
+            android:textColor="@color/red"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/cancelBtnTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameTv"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_toStartOf="@id/deleteBtnTv"
+            android:background="@drawable/btn_effect"
+            android:text="Cancel"
+            android:textColor="@color/blue"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

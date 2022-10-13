@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.AddNewDocActivity">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/click_effect"
+            android:padding="0dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/appTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/backImgV"
+            android:text="Add New Document"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/saveDocTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/click_effect"
+            android:drawableRight="@drawable/ic_save"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/toolbar_btn_icon_bg"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="SAVE"
+            android:textColor="@color/toolbar_btn_icon_bg"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/topRl"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/docNameET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/toolbar_btn_icon_bg"
+                android:hint="Document Name (Optional)"
+                android:inputType="text"
+                android:minHeight="60dp"
+                android:paddingStart="10dp"
+                android:textColor="@color/txt_color"
+                android:textColorHint="@color/toolbar_btn_icon_bg"
+                android:textCursorDrawable="@drawable/edit_text_curso_color" />
+
+            <TextView
+                android:id="@+id/addDocFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/docNameET"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Add Document from :"
+                android:textColor="@color/txt_color"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/addDocFrom"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/addDocByCameraRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/corner_radious_10dp_sky_blue_deep_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/cameraIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_camera_"
+                        app:tint="@color/light_blue" />
+
+                    <TextView
+                        android:id="@+id/cameraTvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/cameraIcon"
+                        android:text="CAMERA"
+                        android:textColor="@color/light_blue"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/addDocSelectFromRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/corner_radious_10dp_sky_blue_deep_bg"
+                    android:gravity="center"
+                    tools:ignore="NotSibling">
+
+                    <ImageView
+                        android:id="@+id/selectFromImgV"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_gallery"
+                        app:tint="@color/light_blue" />
+
+                    <TextView
+                        android:id="@+id/selectFromTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/selectFromImgV"
+                        android:text="SELECT FROM"
+                        android:textColor="@color/light_blue"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/linearLayoutCG"
+                android:layout_marginTop="10dp"
+                android:background="@color/layout_color_bg">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/toolbar_btn_icon_bg" />
+
+                <RelativeLayout
+                    android:id="@+id/showSelectedImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/dashed_border">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvDocContainer"
+                        android:layout_width="120dp"
+                        android:layout_height="136dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:visibility="gone"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/selectedDocPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/noDocSelected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="No Image/File Selected"
+                        android:textColor="@color/toolbar_btn_icon_bg"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/selectCategoryRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/showSelectedImg"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/corner_radious_10dp_white_bg">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvCategoryBg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:id="@+id/lL"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/c0"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/categoryIconImgV"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- android:layout_height="?attr/dropdownListPreferredItemHeight" -->
+                    <Spinner
+                        android:id="@+id/spinnerForSelectCategory"
+                        style="@style/Widget.AppCompat.Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/dropdownListPreferredItemHeight"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="-10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_toEndOf="@+id/cvCategoryBg"
+                        android:background="@drawable/spinner_bg"
+                        android:dropDownWidth="300dp"
+                        android:popupBackground="@android:color/white"
+                        android:popupElevation="3dp"
+                        android:stateListAnimator="@drawable/spinner_sla"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_arrow_down" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/spinnerForSelectCategory"
+                        android:layout_marginStart="65dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="@color/toolbar_btn_icon_bg" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/addFieldCategoryRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/selectCategoryRl"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

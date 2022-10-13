@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/folderCreateCardView"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="Rename File"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@+id/header_title"
+            android:background="@color/toolbar_btn_icon_bg" />
+
+        <EditText
+            android:id="@+id/renameET"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/divider1"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_bg"
+            android:imeOptions="actionNext"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:lines="1"
+            android:padding="15dp"
+            android:textColor="@color/txt_color"
+            android:textColorHint="@color/toolbar_btn_icon_bg"
+            android:textCursorDrawable="@drawable/edit_text_curso_color"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/renameFields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/renameET"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Update Description"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/renameFields"
+            android:background="@color/toolbar_btn_icon_bg" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/editFieldsRv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divider2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/saveBtnTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editFieldsRv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/btn_effect"
+            android:text="Save"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/cancelBtnTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editFieldsRv"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25dp"
+            android:layout_toStartOf="@id/saveBtnTv"
+            android:background="@drawable/btn_effect"
+            android:text="Cancel"
+            android:textColor="@color/blue" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/click_effect"
+            android:padding="0dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/docTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/imgBack"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Document Title"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filterContainerCv"
+        android:layout_width="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="90dp"
+        android:layout_above="@+id/cvDoneBtn"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:translationZ="1dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+
+        <LinearLayout
+            android:id="@+id/filterToolLl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/original"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/ic_image"
+                android:drawableTint="@color/black"
+                android:text="Original"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/magicColor"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/ic_enhamce_image"
+                android:drawableTint="@color/black"
+                android:singleLine="true"
+                android:text="Magic color"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/grayMode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/ic_gray"
+                android:drawableTint="@color/black"
+                android:singleLine="true"
+                android:text="Gray Mode"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/BWMode"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="15dp"
+                android:background="@android:color/transparent"
+                android:drawableTop="@drawable/ic_black_and_white"
+                android:drawableTint="@color/black"
+                android:singleLine="true"
+                android:text="B and W"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/rotateClockwise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/filterContainerCv"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"
+        android:padding="@dimen/bottom_bar_padding"
+        android:src="@drawable/ic_rotate_right" />
+
+    <ImageView
+        android:id="@+id/rotateAntiClockwise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/filterContainerCv"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:padding="@dimen/bottom_bar_padding"
+        android:src="@drawable/ic_rotate_left" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/rotateAntiClockwise"
+        android:layout_below="@id/topRl"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:fitsSystemWindows="true">
+
+        <ImageView
+            android:id="@+id/scannedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDoneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="5dp"
+        android:translationZ="3dp"
+        app:cardBackgroundColor="@color/blue"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp">
+
+        <TextView
+            android:id="@+id/saveImgBtnTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="DONE"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

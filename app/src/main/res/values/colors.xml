@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#3E4DFF</color>
+    <color name="purple_700">#5764ff</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#4285f4</color>
+    <color name="light_blue">#4e8cf5</color>
+    <color name="sky_blue">#E2EDFF</color>
+    <color name="red">#FF1100</color>
+    <color name="light_red">#FF3E2F</color>
+    <color name="green">#00D108</color>
+    <color name="orange">#FE5722</color>
+    <color name="gray">#AA6500</color>
+    <color name="yellow">#FFE500</color>
+    <color name="black_75">#BF42435A</color>
+
+<!--    app background color   -->
+    <color name="app_color_bg">#5764ff</color>
+
+<!--  layout background color  -->
+    <color name="layout_color_bg">#F3F4FF</color>
+    <color name="button_bg">#E2EDFF</color>
+
+<!--   search hints text color  -->
+    <color name="search_hint_text_color">#BCBEE1</color>
+
+<!--  home text color  -->
+    <color name="txt_color">#42435A</color>
+    <color name="txt_color_1">#8688A8</color>
+
+    <!--  date text color  -->
+    <color name="date_text_color_bg">#BCBEE1</color>
+
+<!--   category item background color   -->
+    <color name="c0">#e2edff</color>
+    <color name="c1">#fef2c0</color>
+    <color name="c2">#c0eae8</color>
+    <color name="c3">#ffd6f4</color>
+    <color name="c10">#D1B8FB</color>
+    <color name="c4">#ffd1d1</color>
+    <color name="c8">#B8FFF8</color>
+    <color name="c6">#F4B7FF</color>
+    <color name="c5">#ffe3bc</color>
+    <color name="c9">#B8FFBA</color>
+    <color name="c7">#FFB7CF</color>
+    <color name="c11">#AEBBFF</color>
+    <color name="c12">#93E1A0</color>
+    <color name="c13">#BE96C5</color>
+
+<!--  No Documents Yet Text Color  -->
+    <color name="no_document_yet_txt_color">#D2D5F8</color>
+
+<!--  toolbar items tint color  -->
+    <color name="toolbar_btn_icon_bg">#BCBEE1</color>
+
+<!--  button click effect color  -->
+    <color name="pressed">#C8EFFF</color>
+    <color name="normal">#FFFFFF</color>
+
+<!--  color picker color  -->
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
+
+</resources>

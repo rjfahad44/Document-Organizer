@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_color_bg"
+    tools:context=".activity.AddNewCategoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/click_effect"
+            android:padding="0dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/appTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/backImgV"
+            android:text="Update Category"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/updateBtnTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/click_effect"
+            android:drawableRight="@drawable/ic_save"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/toolbar_btn_icon_bg"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="UPDATE"
+            android:textColor="@color/toolbar_btn_icon_bg" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topRl"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <EditText
+                android:id="@+id/categoryNameEt"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/toolbar_btn_icon_bg"
+                android:hint="Category Name"
+                android:textColor="@color/txt_color"
+                android:minHeight="48dp"
+                android:paddingStart="10dp"
+                android:textColorHint="@color/toolbar_btn_icon_bg"
+                android:textCursorDrawable="@drawable/edit_text_curso_color" />
+
+            <TextView
+                android:id="@+id/categoryNameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categoryNameEt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:text="Category Color"
+                android:textStyle="bold"
+                android:textColor="@color/txt_color" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvColorSelect"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/categoryNameEt"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/categoryNameTv"
+                app:cardCornerRadius="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="1dp">
+
+                <ImageView
+                    android:id="@+id/colorChooserImgV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="0dp"
+                    android:background="@color/c0"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/categoryTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categoryNameEt"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/cvIconContainer"
+                android:text="Category Icon"
+                android:textColor="@color/txt_color"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvIconContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_below="@+id/categoryNameEt"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                app:cardBackgroundColor="@color/white"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/lL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:background="@drawable/category_item_layout_bg">
+
+                    <ImageView
+                        android:id="@+id/folderIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/fieldTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/categoryNameTv"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="60dp"
+                android:text="Fields"
+                android:textColor="@color/txt_color"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvAddField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/categoryNameTv"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@id/fieldTv"
+                android:translationZ="3dp"
+                android:visibility="visible"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:cardUseCompatPadding="true"
+                app:cardBackgroundColor="@color/white">
+
+                <ImageView
+                    android:id="@+id/addFieldImgV"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/ic_plus"
+                    app:tint="@color/toolbar_btn_icon_bg" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cancelBtnTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bottomLl"
+                android:layout_marginBottom="15dp"
+                android:layout_toStartOf="@id/saveBtnTv"
+                android:background="@drawable/click_effect"
+                android:text="Cancel"
+                android:textColor="@color/orange"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/saveBtnTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/bottomLl"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="15dp"
+                android:text="Add"
+                android:textColor="@color/toolbar_btn_icon_bg"
+                android:background="@drawable/click_effect"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/bottomLl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/cvAddField"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/addFieldET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="Type Field Name.."
+                    android:textColor="@color/txt_color"
+                    android:backgroundTint="@color/toolbar_btn_icon_bg"
+                    android:minHeight="48dp"
+                    android:paddingStart="10dp"
+                    android:textColorHint="@color/toolbar_btn_icon_bg"
+                    android:textCursorDrawable="@drawable/edit_text_curso_color"
+                    android:visibility="gone" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFieldCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="visible"
+                    tools:listitem="@layout/item_field_rv" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

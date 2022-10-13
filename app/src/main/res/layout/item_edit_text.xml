@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/descriptionET"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/toolbar_btn_icon_bg"
+        android:hint="[Optional]"
+        android:inputType="text"
+        android:textColor="@color/txt_color"
+        android:textSize="14sp"
+        android:maxLines="5"
+        android:paddingStart="5dp"
+        android:textColorHint="@color/toolbar_btn_icon_bg"
+        android:textCursorDrawable="@drawable/edit_text_curso_color" />
+
+</RelativeLayout>

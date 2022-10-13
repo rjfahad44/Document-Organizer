@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layout_color_bg"
+    tools:context=".activity.SyncActivity">
+
+    <RelativeLayout
+        android:id="@+id/topRl"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/backImgV"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/click_effect"
+            android:padding="0dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/appTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/backImgV"
+            android:text="Sync your data"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topRl"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/upperTxtRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:text="LOGIN TO YOUR CLOUD ACCOUNT"
+                    android:textColor="@color/txt_color"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/cvSubTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cvTitle"
+                    android:layout_centerHorizontal="true"
+                    android:text="You need to sign in to sync your data in to cloud."
+                    android:textColor="@color/txt_color_1" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/aboveAccountTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/txt_color"
+                android:textAlignment="center"
+                android:text="This account use to Sync your documents"
+                android:visibility="gone"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/gmailAccountCv"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_below="@+id/aboveAccountTv"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="3dp"
+                app:cardBackgroundColor="@color/white"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/profileImgContainerCv"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="0dp"
+                        app:cardBackgroundColor="@color/white">
+
+                        <ImageView
+                            android:id="@+id/profileImg"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/gmailId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/profileImgContainerCv"
+                        android:textColor="@color/blue"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/googleSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:background="@color/blue"
+                android:padding="1dp">
+
+                <ImageView
+                    android:id="@+id/googleImgV"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:src="@drawable/google" />
+
+                <TextView
+                    android:id="@+id/singInTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@id/googleImgV"
+                    android:gravity="center"
+                    android:text="Sign in with Google"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/synchronizingRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/googleSignIn"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/horizontalDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/toolbar_btn_icon_bg" />
+
+                <TextView
+                    android:id="@+id/synchronizeDocumentsTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/horizontalDivider"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/synchronizing_txt"
+                    android:textColor="@color/txt_color" />
+
+            </RelativeLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/syncCv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/synchronizingRl"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:translationZ="2dp"
+                app:cardBackgroundColor="@color/blue"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <ImageView
+                        android:id="@+id/syncIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_sync"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/syncTvBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/syncIcon"
+                        android:text="Sync"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:id="@+id/horizontalDivider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/syncCv"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:background="@color/toolbar_btn_icon_bg" />
+
+            <TextView
+                android:id="@+id/backupSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/horizontalDivider1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Backup Size :"
+                android:textColor="@color/txt_color_1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/backupSizeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/horizontalDivider1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@id/backupSize"
+                android:text="0 KB"
+                android:textColor="@color/txt_color_1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/lastBackup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/backupSize"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Backup Date :"
+                android:textColor="@color/txt_color_1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/lastBackupDateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/backupSize"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/backupSize"
+                android:text="27 May 2020"
+                android:textColor="@color/txt_color_1"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/googleLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:background="@color/blue"
+                android:padding="1dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/gImgV"
+                    android:layout_width="48dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:src="@drawable/google" />
+
+                <TextView
+                    android:id="@+id/logoutTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_toEndOf="@id/gImgV"
+                    android:gravity="center"
+                    android:text="Log Out"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
